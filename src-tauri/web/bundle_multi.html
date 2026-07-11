@@ -73,7 +73,7 @@ var wakeLock=null;async function keepAwake(){try{if("wakeLock"in navigator)wakeL
 <script>
 window.__SU_LANG = SU.detectLang(window.__SU_LANG);
 SU.applyI18n();
-var cnt = {n};
+var cnt = __CNT__;
 document.getElementById("page-title").textContent = cnt + " " + SU.t("files_count");
 document.title = cnt + " " + SU.t("files_count") + " - Su!";
 updateBtn();

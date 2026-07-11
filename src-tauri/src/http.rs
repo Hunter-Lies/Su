@@ -381,7 +381,7 @@ fn serve_bundle_page(req: tiny_http::Request, bundle_id: &str, state: &Arc<AppSt
                 ));
             }
         }
-        let lang = state.lang.lock().unwrap().clone(); let mode = state.mobile_lang_mode.lock().unwrap().clone(); let html = inject_lang(include_str!("../web/bundle_multi.html"), &lang, &mode).replace("{items}", &items).replace("{n}", &count.to_string());
+        let lang = state.lang.lock().unwrap().clone(); let mode = state.mobile_lang_mode.lock().unwrap().clone(); let html = inject_lang(include_str!("../web/bundle_multi.html"), &lang, &mode).replace("{items}", &items).replace("__CNT__", &count.to_string());
         let body = html.into_bytes();
         let len = body.len() as u64;
         req.respond(tiny_http::Response::from_data(body).with_status_code(200)

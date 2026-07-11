@@ -33,7 +33,7 @@ function setupReceived() {
       var items = await invoke("get_received_files");
       if (!receivedList) return;
       if (items.length === 0) {
-        receivedList.innerHTML = '<div class="received-empty">' + t("no_received") + '</div>';
+        receivedList.innerHTML = '<div class="received-empty" data-i18n="no_received">' + t("no_received") + '</div>';
         return;
       }
       receivedList.innerHTML = "";
