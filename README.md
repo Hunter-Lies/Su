@@ -111,6 +111,10 @@ npm run tauri build
 
 MIT License — 详见 [LICENSE](LICENSE)
 
+## 贡献者
+
+[![](https://contrib.rocks/image?repo=Hunter-Lies/Su)](https://github.com/Hunter-Lies/Su/graphs/contributors)
+
 ## 作者
 
 **HunterLies** — [Bilibili](https://space.bilibili.com/488494586) · [官网](https://htovo.com)
