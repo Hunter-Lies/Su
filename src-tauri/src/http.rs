@@ -222,7 +222,7 @@ fn handle_upload(mut req: tiny_http::Request, url: &str, state: &Arc<AppState>) 
                     }));
                     // Windows native notification
                     use tauri_plugin_notification::NotificationExt;
-                    let lang = state.lang.lock().unwrap_or_else(|_| std::sync::Mutex::new("zh-CN".into())).clone();
+                    let lang = state.lang.lock().map(|g| g.clone()).unwrap_or_else(|_| "zh-CN".into());
                     let (title, body) = match lang.as_str() {
                         "zh-TW" => (format!("Su! - 接收記錄"), format!("來自 {} · {} 個檔案", device, expected)),
                         "en" => (format!("Su! - Received"), format!("From {} · {} file(s)", device, expected)),
