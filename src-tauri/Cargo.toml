@@ -1,0 +1,35 @@
+[package]
+name = "su"
+version = "1.2.0"
+description = "Su! - 局域网文件快传"
+authors = ["you"]
+edition = "2021"
+
+[lib]
+name = "su_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = ["tray-icon"] }
+tauri-plugin-opener = "2"
+tauri-plugin-shell = "2"
+tauri-plugin-dialog = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tiny_http = "0.12"
+local-ip-address = "0.6"
+rand = "0.8"
+mime_guess = "2"
+urlencoding = "2"
+base64 = "0.22"
+qrcode = "0.14"
+image = "0.25"
+dirs = "6"
+get_if_addrs = "0.5"
+rodio = "0.20"
+symphonia = { version = "0.5", features = ["mp3"] }
+raw-window-handle = "0.6"
+windows = { version = "0.58", features = ["Win32_UI_Controls", "Win32_Graphics_Dwm", "Win32_Foundation", "Win32_System_Com"] }

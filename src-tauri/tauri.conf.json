@@ -1,0 +1,45 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Su",
+  "version": "1.2.0",
+  "identifier": "com.htovo.su",
+  "build": {
+    "frontendDist": "../src"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "windows": [
+      {
+        "title": "Su! - \u626b\u4e00\u4e0b\uff0c\u9a6c\u4e0a\u9001\u5230",
+        "width": 760,
+        "height": 520,
+        "minWidth": 680,
+        "minHeight": 440,
+        "resizable": true,
+        "center": true,
+        "dragDropEnabled": true,
+        "decorations": false,
+        "transparent": true
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ]
+  },
+  "plugins": {
+    "shell": {
+      "open": true
+    }
+  }
+}
