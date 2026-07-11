@@ -344,3 +344,15 @@ pub fn get_mobile_lang_mode(state: tauri::State<Arc<AppState>>) -> String {
 pub fn set_mobile_lang_mode(state: tauri::State<Arc<AppState>>, mode: String) {
     *state.mobile_lang_mode.lock().unwrap() = mode;
 }
+
+
+#[tauri::command]
+fn show_notification(app: tauri::AppHandle, title: String, body: String) {
+    use tauri_plugin_notification::NotificationExt;
+    app.notification()
+        .builder()
+        .title(&title)
+        .body(&body)
+        .show()
+        .ok();
+}
