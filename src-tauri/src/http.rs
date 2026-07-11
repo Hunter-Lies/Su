@@ -221,18 +221,6 @@ fn handle_upload(mut req: tiny_http::Request, url: &str, state: &Arc<AppState>) 
                         "device": device,
                         "count": expected,
                     }));
-                    // Windows native notification
-                    use tauri_plugin_notification::NotificationExt;
-                    let lang = state.lang.lock().map(|g| g.clone()).unwrap_or_else(|_| "zh-CN".into());
-                    let (title, body) = match lang.as_str() {
-                        "zh-TW" => (format!("Su! - 接收記錄"), format!("來自 {} · {} 個檔案", device, expected)),
-                        "en" => (format!("Su! - Received"), format!("From {} · {} file(s)", device, expected)),
-                        "ja" => (format!("Su! - 受信"), format!("{} から · {} ファイル", device, expected)),
-                        "ko" => (format!("Su! - 수신"), format!("{} · {}개 파일", device, expected)),
-                        _ => (format!("Su! - 接收记录"), format!("来自 {} · {} 个文件", device, expected)),
-                    };
-                    let n = app.notification().builder().title(&title).body(&body);
-                    n.show().ok();
                     // Bring window to front
                     if let Some(w) = app.get_webview_window("main") {
                         let _ = w.show();
