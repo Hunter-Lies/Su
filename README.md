@@ -1,8 +1,12 @@
+<p align="center"><img src="logo.png" width="128" alt="Su!"></p>
+
 # Su! - 局域网文件快传
 
 > 咻一下，就到了！Whoosh, it's there!
 
 轻量级局域网文件传输工具。手机扫码即可与电脑互传文件，无需云端，纯本地网络。
+
+<p align="center"><img src="screenshot.png" width="600" alt="Su! 截图"></p>
 
 ## 功能特性
 
