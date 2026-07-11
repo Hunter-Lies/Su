@@ -1,99 +1,103 @@
-# Su! - LAN File Transfer
+# Su! - 局域网文件快传
 
-> ????????Whoosh, it's there!
+> 咻一下，就到了！Whoosh, it's there!
 
-A lightweight LAN file transfer tool. Share files between phone and PC by scanning a QR code. No cloud, no upload, pure local network.
+轻量级局域网文件传输工具。手机扫码即可与电脑互传文件，无需云端，纯本地网络。
 
-## Features
+## 功能特性
 
-- **QR Code Sharing** ? Right-click any file and share via QR. Phone scans and downloads instantly.
-- **Phone to PC** ? Send files from phone browser to your computer over LAN.
-- **Multi-file Support** ? Batch download with select-all and progress tracking.
-- **Multi-language** ? Supports Chinese (Simplified/Traditional), English, Japanese, Korean.
-- **Dark Mode** ? Classic and frosted glass themes with auto dark mode.
-- **Batch Receive** ? Smart batch grouping with device identification (iPhone/Android/Windows/Mac/Linux).
-- **Notification Sounds** ? Configurable sound alerts on file receive.
-- **System Tray** ? Minimize to tray, close to tray options.
-- **Resumable Upload** ? Chunked upload with progress tracking.
-- **Privacy & Security** ? Optional access code for received files.
+- **二维码分享** — 右键任意文件生成二维码，手机扫码即下载
+- **手机传电脑** — 手机浏览器发送文件到电脑，同一局域网即可
+- **多文件支持** — 批量下载，全选/单选，进度追踪
+- **多语言** — 简体中文 / 繁體中文 / English / 日本語 / 한국어
+- **深色模式** — 经典 / 毛玻璃主题，自动跟随系统
+- **批次管理** — 智能分批，设备识别 (iPhone/Android/Windows/Mac/Linux)
+- **提示音** — 收到文件时播放自定义音效
+- **系统托盘** — 支持关闭到托盘、开机自启
+- **断点续传** — 分块上传，进度追踪
+- **隐私安全** — 可选的访问密码保护
 
-## Tech Stack
+## 技术栈
 
-- **Desktop**: Tauri v2 + Rust
-- **Frontend**: Vanilla JS (ES Modules) + CSS Custom Properties
-- **Mobile Pages**: Plain HTML/JS/CSS served by embedded HTTP server
-- **HTTP Server**: tiny_http (Rust)
+- **桌面端**: Tauri v2 + Rust
+- **前端**: Vanilla JS (ES Modules) + CSS 自定义属性
+- **手机端页面**: 纯 HTML/JS/CSS，由内置 HTTP 服务器提供
+- **HTTP 服务**: tiny_http (Rust)
 
-## Project Structure
+## 项目结构
 
 ```
 Su/
-??? src/                    # Desktop frontend
-?   ??? index.html          # Main window
-?   ??? js/                 # JavaScript modules
-?   ?   ??? main.js         # Entry point
-?   ?   ??? i18n.js         # Internationalization
-?   ?   ??? state.js        # DOM refs & app state
-?   ?   ??? utils.js        # Toast, clipboard, QR helpers
-?   ?   ??? settings.js     # Settings page
-?   ?   ??? share.js        # File sharing UI
-?   ?   ??? received.js     # Received records UI
-?   ?   ??? theme.js        # Theme & appearance
-?   ??? css/
-?   ?   ??? styles.css      # All styles
-?   ??? assets/
-?       ??? fonts/          # Font Awesome (local)
-??? src-tauri/
-?   ??? src/                # Rust backend
-?   ?   ??? main.rs         # Entry point
-?   ?   ??? lib.rs          # Tauri setup, window, tray
-?   ?   ??? commands.rs     # Tauri IPC commands
-?   ?   ??? http.rs         # Embedded HTTP server
-?   ?   ??? state.rs        # Shared app state
-?   ?   ??? utils.rs        # HTTP helpers
-?   ?   ??? qr.rs           # QR code generation
-?   ?   ??? sound.rs        # Sound notification
-?   ?   ??? com_shellext.rs # Windows shell extension
-?   ??? web/                # Mobile web pages (served by HTTP)
-?   ?   ??? send.html       # Phone ? PC send page
-?   ?   ??? download.html   # Single file download
-?   ?   ??? bundle_multi.html # Multi-file download
-?   ?   ??? i18n.js         # Mobile translations
-?   ?   ??? fonts/          # Font Awesome
-?   ??? sounds/             # Notification sound files
-?   ??? icons/              # App icons
-?   ??? Cargo.toml
-?   ??? tauri.conf.json
-??? LICENSE
-??? README.md
+├── src/                    # 桌面前端
+│   ├── index.html          # 主窗口
+│   ├── js/                 # JavaScript 模块
+│   │   ├── main.js         # 入口
+│   │   ├── i18n.js         # 多语言
+│   │   ├── state.js        # DOM 引用与应用状态
+│   │   ├── utils.js        # Toast、剪贴板、二维码工具
+│   │   ├── settings.js     # 设置页面
+│   │   ├── share.js        # 文件分享 UI
+│   │   ├── received.js     # 接收记录 UI
+│   │   └── theme.js        # 主题与外观
+│   ├── css/
+│   │   └── styles.css      # 全部样式
+│   └── assets/
+│       └── fonts/          # Font Awesome (本地)
+├── src-tauri/              # Rust 后端
+│   ├── src/                # Rust 源码
+│   │   ├── main.rs         # 入口
+│   │   ├── lib.rs          # 应用初始化与 Tauri 命令注册
+│   │   ├── http.rs         # HTTP 服务器与路由
+│   │   ├── commands.rs     # Tauri 命令
+│   │   ├── state.rs        # 应用状态与持久化
+│   │   ├── sound.rs        # 音效播放
+│   │   ├── qr.rs           # 二维码生成
+│   │   ├── com_shellext.rs # Windows 右键菜单扩展
+│   │   └── utils.rs        # 工具函数
+│   ├── web/                # 手机端页面
+│   │   ├── send.html       # 发送页面
+│   │   ├── download.html   # 单文件下载
+│   │   └── bundle_multi.html # 多文件下载
+│   ├── sounds/             # 提示音文件
+│   └── icons/              # 应用图标
+├── package.json
+└── README.md
 ```
 
-## Development
+## 构建
 
-### Prerequisites
-- [Rust](https://rustup.rs/) (latest stable)
-- [Node.js](https://nodejs.org/) (for Tauri CLI)
-- Windows: Visual Studio Build Tools (for `windows-rs`)
+### 环境要求
 
-### Build
+- [Node.js](https://nodejs.org/) >= 18
+- [Rust](https://www.rust-lang.org/) >= 1.70
+- Windows: [Visual Studio Build Tools](https://visualstudio.microsoft.com/downloads/) 或 [Microsoft C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/)
+
+### 开发模式
+
 ```bash
-cd src-tauri
-cargo build          # Debug
-cargo build --release # Release
+npm install
+npm run tauri dev
 ```
 
-### Run
+### 构建正式版
+
 ```bash
-cargo run
+npm run tauri build
 ```
 
-## Author
+构建产物在 `src-tauri/target/release/`。
 
-**HunterLies**
+## 使用
 
-- Website: [Htovo.com](https://htovo.com)
-- Bilibili: [@HunterLies](https://space.bilibili.com/488494586)
+1. 启动 Su!
+2. 电脑端：拖拽文件到窗口生成二维码，手机扫码下载
+3. 手机端：扫码进入发送页面，选择文件发送到电脑
+4. 接收的文件保存在 `下载/Su/` 文件夹
 
-## License
+## 许可证
 
-MIT
+MIT License — 详见 [LICENSE](LICENSE)
+
+## 作者
+
+**HunterLies** — [Bilibili](https://space.bilibili.com/488494586) · [官网](https://htovo.com)
