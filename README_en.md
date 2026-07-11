@@ -13,10 +13,10 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Hunter-Lies/Su/releases/latest"><img src="https://img.shields.io/github/v/release/Hunter-Lies/Su?style=flat-square" alt="Release"></a>
-  <a href="https://github.com/Hunter-Lies/Su/releases/latest"><img src="https://img.shields.io/github/downloads/Hunter-Lies/Su/total?style=flat-square" alt="Downloads"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/Hunter-Lies/Su?style=flat-square" alt="MIT"></a>
-  <a href="https://github.com/Hunter-Lies/Su/stargazers"><img src="https://img.shields.io/github/stars/Hunter-Lies/Su?style=flat-square" alt="Stars"></a>
+  <a href="https://github.com/Hunter-Lies/Su-Share/releases/latest"><img src="https://img.shields.io/github/v/release/Hunter-Lies/Su-Share?style=flat-square" alt="Release"></a>
+  <a href="https://github.com/Hunter-Lies/Su-Share/releases/latest"><img src="https://img.shields.io/github/downloads/Hunter-Lies/Su/total?style=flat-square" alt="Downloads"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/Hunter-Lies/Su-Share?style=flat-square" alt="MIT"></a>
+  <a href="https://github.com/Hunter-Lies/Su-Share/stargazers"><img src="https://img.shields.io/github/stars/Hunter-Lies/Su-Share?style=flat-square" alt="Stars"></a>
 </p>
 
 ---
@@ -27,8 +27,8 @@
 
 | Version | Link | For |
 |---------|------|-----|
-| 64-bit | [Su-v1.2.0-windows-x64.zip](https://github.com/Hunter-Lies/Su/releases/latest/download/Su-v1.2.0-windows-x64.zip) | Modern Windows 10/11 |
-| 32-bit | [Su-v1.2.0-windows-x86.zip](https://github.com/Hunter-Lies/Su/releases/latest/download/Su-v1.2.0-windows-x86.zip) | Legacy / 32-bit systems |
+| 64-bit | [Su-v1.2.0-windows-x64.zip](https://github.com/Hunter-Lies/Su-Share/releases/latest/download/Su-v1.2.0-windows-x64.zip) | Modern Windows 10/11 |
+| 32-bit | [Su-v1.2.0-windows-x86.zip](https://github.com/Hunter-Lies/Su-Share/releases/latest/download/Su-v1.2.0-windows-x86.zip) | Legacy / 32-bit systems |
 
 > Unzip and run `su.exe` — **no installation required**. If SmartScreen blocks it, click "More info" -> "Run anyway".
 >
@@ -49,7 +49,7 @@
 
 ## Quick Start
 
-1. [Download](https://github.com/Hunter-Lies/Su/releases/latest) the zip for your system, unzip
+1. [Download](https://github.com/Hunter-Lies/Su-Share/releases/latest) the zip for your system, unzip
 2. Double-click `su.exe` — the window opens with a QR code
 3. **Phone -> PC**: Phone scans QR -> select files to send
 4. **PC -> Phone**: Drag files to the window -> phone scans QR to download
@@ -140,7 +140,7 @@ Su/
 
 ## Contributors
 
-[![Contributors](https://contrib.rocks/image?repo=Hunter-Lies/Su)](https://github.com/Hunter-Lies/Su/graphs/contributors)
+[![Contributors](https://contrib.rocks/image?repo=Hunter-Lies/Su-Share)](https://github.com/Hunter-Lies/Su-Share/graphs/contributors)
 
 Issues and PRs welcome!
 

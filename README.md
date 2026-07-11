@@ -13,10 +13,10 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Hunter-Lies/Su/releases/latest"><img src="https://img.shields.io/github/v/release/Hunter-Lies/Su?style=flat-square" alt="Release"></a>
-  <a href="https://github.com/Hunter-Lies/Su/releases/latest"><img src="https://img.shields.io/github/downloads/Hunter-Lies/Su/total?style=flat-square" alt="Downloads"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/Hunter-Lies/Su?style=flat-square" alt="MIT"></a>
-  <a href="https://github.com/Hunter-Lies/Su/stargazers"><img src="https://img.shields.io/github/stars/Hunter-Lies/Su?style=flat-square" alt="Stars"></a>
+  <a href="https://github.com/Hunter-Lies/Su-Share/releases/latest"><img src="https://img.shields.io/github/v/release/Hunter-Lies/Su-Share?style=flat-square" alt="Release"></a>
+  <a href="https://github.com/Hunter-Lies/Su-Share/releases/latest"><img src="https://img.shields.io/github/downloads/Hunter-Lies/Su/total?style=flat-square" alt="Downloads"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/Hunter-Lies/Su-Share?style=flat-square" alt="MIT"></a>
+  <a href="https://github.com/Hunter-Lies/Su-Share/stargazers"><img src="https://img.shields.io/github/stars/Hunter-Lies/Su-Share?style=flat-square" alt="Stars"></a>
 </p>
 
 ---
@@ -27,8 +27,8 @@
 
 | 版本 | 下载 | 适用 |
 |------|------|------|
-| 64 位 | [Su-v1.2.0-windows-x64.zip](https://github.com/Hunter-Lies/Su/releases/latest/download/Su-v1.2.0-windows-x64.zip) | 主流 Windows 10/11 |
-| 32 位 | [Su-v1.2.0-windows-x86.zip](https://github.com/Hunter-Lies/Su/releases/latest/download/Su-v1.2.0-windows-x86.zip) | 老旧 / 32 位系统 |
+| 64 位 | [Su-v1.2.0-windows-x64.zip](https://github.com/Hunter-Lies/Su-Share/releases/latest/download/Su-v1.2.0-windows-x64.zip) | 主流 Windows 10/11 |
+| 32 位 | [Su-v1.2.0-windows-x86.zip](https://github.com/Hunter-Lies/Su-Share/releases/latest/download/Su-v1.2.0-windows-x86.zip) | 老旧 / 32 位系统 |
 
 > 解压后双击 `su.exe` 即可运行，**无需安装**。如遇 SmartScreen 拦截，点击「更多信息」→「仍要运行」。
 >
@@ -49,7 +49,7 @@
 
 ## 快速开始
 
-1. [下载](https://github.com/Hunter-Lies/Su/releases/latest)对应版本 zip，解压
+1. [下载](https://github.com/Hunter-Lies/Su-Share/releases/latest)对应版本 zip，解压
 2. 双击 `su.exe`，软件启动后窗口显示二维码
 3. **手机发电脑**：手机扫码 → 选择文件发送
 4. **电脑发手机**：拖文件到窗口 → 手机扫码下载
@@ -140,7 +140,7 @@ Su/
 
 ## 贡献者
 
-[![Contributors](https://contrib.rocks/image?repo=Hunter-Lies/Su)](https://github.com/Hunter-Lies/Su/graphs/contributors)
+[![Contributors](https://contrib.rocks/image?repo=Hunter-Lies/Su-Share)](https://github.com/Hunter-Lies/Su-Share/graphs/contributors)
 
 欢迎提交 Issue 和 PR！
 
