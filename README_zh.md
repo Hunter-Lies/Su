@@ -1,6 +1,11 @@
 <p align="center"><img src="logo.png" width="128" alt="Su!"></p>
 
 <h1 align="center">Su! — 局域网文件快传</h1>
+
+<p align="center">
+  <a href="README.md"><img src="https://img.shields.io/badge/English-README-blue?style=for-the-badge" alt="English"></a>
+</p>
+
 <p align="center"><em>咻一下，就到了！</em></p>
 
 <p align="center">
@@ -10,7 +15,6 @@
 <p align="center">
   <a href="https://github.com/Hunter-Lies/Su/releases"><img src="https://img.shields.io/github/v/release/Hunter-Lies/Su?style=flat-square" alt="Release"></a>
   <a href="LICENSE"><img src="https://img.shields.io/github/license/Hunter-Lies/Su?style=flat-square" alt="MIT"></a>
-  <a href="README.md"><img src="https://img.shields.io/badge/Language-English-blue?style=flat-square" alt="English"></a>
 </p>
 
 ---

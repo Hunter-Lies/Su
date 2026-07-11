@@ -1,6 +1,11 @@
 <p align="center"><img src="logo.png" width="128" alt="Su!"></p>
 
 <h1 align="center">Su! — LAN File Transfer</h1>
+
+<p align="center">
+  <a href="README_zh.md"><img src="https://img.shields.io/badge/中文-README-red?style=for-the-badge" alt="中文"></a>
+</p>
+
 <p align="center"><em>咻一下，就到了！ Whoosh, it's there!</em></p>
 
 <p align="center">
