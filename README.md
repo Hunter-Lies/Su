@@ -146,6 +146,13 @@ Su-Share/
 
 
 
+
+## 贡献者
+
+<a href="https://github.com/Hunter-Lies/Su-Share/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Hunter-Lies/Su-Share" />
+</a>
+
 ## 许可证
 
 MIT — 详见 [LICENSE](LICENSE)
