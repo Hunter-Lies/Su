@@ -4,7 +4,7 @@
     "version": "0.1.0",
     "type": "module",
     "scripts": {
-        "dev": "tauri dev",
+        "dev": "node scripts/dev.mjs",
         "build": "tauri build",
         "prebuild": "python src-tauri/web/i18n/build.py || echo i18n not rebuilt",
         "tauri": "npm run prebuild && tauri"
